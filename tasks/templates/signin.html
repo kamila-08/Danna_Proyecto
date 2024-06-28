@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="center-content">
+{{error}}
+    <div class="estilo_Form">
+        <h1 class="signin">Signin</h1>
+        <form action="/signin/" method="POST" class="listo">
+            {% csrf_token %}
+            {{ form.as_p }}
+
+            <button type="submit" class="boton_Signin">Signin</button>
+        </form>
+    </div>
+</div>
+{% endblock %}

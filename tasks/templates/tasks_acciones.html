@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="center-content">
+    <h2 class="cursos">Cursos</h2>
+
+    <table class="styled-table">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Código</th>
+                <th>Créditos</th>
+                <th>Eliminar</th>
+                <th>Modificar</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for task in tasks %}
+            <tr>
+                <td>{{task.Nombre}}</td>
+                <td>{{task.Codigo}}</td>
+                <td>{{task.Creditos}}</td>
+                <td>
+                    <form method="post" action="{% url 'acciones' %}">
+                        {% csrf_token %}
+                        <input type="hidden" name="tarea_id_delete" value="{{ task.Codigo}}">
+                        <button type="submit" class="buton_Signup">Eliminar</button>
+                    </form>
+                    
+                </td>
+                <td>
+                    <form method="post" action="{% url 'acciones' %}">
+                        {% csrf_token %}
+                        <input type="hidden" name="tarea_id_update" value="{{ task.Codigo}}">
+                        <button type="submit" name="action" value="update" class="buton_Signup">Modificar</button>
+                    </form>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}

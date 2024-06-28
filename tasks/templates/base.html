@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instituto Superior de Educación Rural ISER</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            background-color: white;
+            background-image: url('/static/media/iser1.jpg');
+        }
+
+        .center-content {
+            text-align: center;
+            margin-top: 50px; 
+            color: black;
+        }
+        .estilo_Form{
+            background-color: rgba(0, 0, 0, 0.3);
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            color: white;
+            text-shadow: 
+                1px 1px 0px rgba(0, 0, 0, 0.9),
+                -1px -1px 0px rgba(0, 0, 0, 0.9),
+                1px -1px 0px rgba(0, 0, 0, 0.9),
+                -1px 1px 0px rgba(0, 0, 0, 0.9);
+            max-width: 500px;
+            margin: 0 auto; 
+            text-align: center; 
+        }
+        .estilo{
+            background-color: rgba(0, 0, 0, 0.3);
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            color: white;
+            text-shadow: 
+                1px 1px 0px rgba(0, 0, 0, 0.9),
+                -1px -1px 0px rgba(0, 0, 0, 0.9),
+                1px -1px 0px rgba(0, 0, 0, 0.9),
+                -1px 1px 0px rgba(0, 0, 0, 0.9);
+            max-width: 500px;
+            margin: 0 auto; 
+            text-align: center; 
+        }
+
+        h1 {
+            color: white; 
+            font-size: 2.5em;
+            margin-bottom: 20px; 
+        }
+        .iser, .tecnologia {
+    color: #e6b800; 
+    font-weight: 500;
+    text-shadow: 
+        1px 1px 0px rgba(0, 0, 0, 0.9),
+        -1px -1px 0px rgba(0, 0, 0, 0.9),
+        1px -1px 0px rgba(0, 0, 0, 0.9),
+        -1px 1px 0px rgba(0, 0, 0, 0.9);
+        }
+       
+        .signup{
+            color: black;
+            margin-top: 0;
+    text-shadow: 
+        1px 1px 0px rgba(255, 255, 255, 0.9), 
+        -1px -1px 0px rgba(255, 255, 255, 0.9),
+        1px -1px 0px rgba(255, 255, 255, 0.9),
+        -1px 1px 0px rgba(255, 255, 255, 0.9);
+    font-family: Georgia, 'Times New Roman', Times, serif; 
+    font-size: 2em; 
+        }
+        .signin{
+            color: black;
+            margin-top: 0;
+    text-shadow: 
+        1px 1px 0px rgba(255, 255, 255, 0.9),
+        -1px -1px 0px rgba(255, 255, 255, 0.9),
+        1px -1px 0px rgba(255, 255, 255, 0.9),
+        -1px 1px 0px rgba(255, 255, 255, 0.9);
+    font-family: Georgia, 'Times New Roman', Times, serif; 
+    font-size: 2em; 
+        }
+        .listo {
+    color: black;
+    text-shadow: 
+        1px 1px 0px rgba(255, 255, 255, 0.9),
+        -1px -1px 0px rgba(255, 255, 255, 0.9),
+        1px -1px 0px rgba(255, 255, 255, 0.9),
+        -1px 1px 0px rgba(255, 255, 255, 0.9);
+    font-family: Georgia, 'Times New Roman', Times, serif; 
+    font-size: 2em; 
+    background-color: rgba(255, 255, 255, 0.5); 
+    padding: 10px; 
+    border-radius: 5px; 
+}
+.listo_Signup {
+    color: black;
+    text-shadow: 
+        1px 1px 0px rgba(255, 255, 255, 0.9), 
+        -1px -1px 0px rgba(255, 255, 255, 0.9),
+        1px -1px 0px rgba(255, 255, 255, 0.9),
+        -1px 1px 0px rgba(255, 255, 255, 0.9);
+    font-family: Georgia, 'Times New Roman', Times, serif; 
+    font-size: 1em; 
+    background-color: rgba(255, 255, 255, 0.5); 
+    padding: 10px; 
+    border-radius: 5px; 
+}
+
+        .crear_form{
+            max-width: 400px;
+            margin: 5 auto;
+            margin-bottom: 20px;
+            margin-top: 30px;
+            margin-left: 450px;
+            padding: 20px;
+            font-family: Georgia, 'Times New Roman', Times, serif; 
+            font-size: 2em; 
+            color: white;
+            text-shadow: 
+                1px 1px 0px rgba(0, 0, 0, 0.9),
+                -1px -1px 0px rgba(0, 0, 0, 0.9),
+                1px -1px 0px rgba(0, 0, 0, 0.9),
+                -1px 1px 0px rgba(0, 0, 0, 0.9);
+            border: 1px solid #ccc;
+            background-color: rgba(0, 0, 0, 0.3);
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .crear {
+            color: black;
+    text-shadow: 
+        1px 1px 0px rgba(255, 255, 255, 0.9), 
+        -1px -1px 0px rgba(255, 255, 255, 0.9),
+        1px -1px 0px rgba(255, 255, 255, 0.9),
+        -1px 1px 0px rgba(255, 255, 255, 0.9);
+    font-family: Georgia, 'Times New Roman', Times, serif; 
+    font-size: 2em; 
+        }
+        .buton_Save{
+            background-color: #009879;
+            color: green;
+            font-size: 24px;
+            padding: 10px 20px; 
+            border: none; 
+            cursor: pointer; 
+            border-radius: 5px; 
+            margin-bottom: 20px;
+            text-align: center;
+            margin-top: 20px;
+            text-shadow: 
+                1px 1px 0px rgba(0, 0, 0, 0.9),
+                -1px -1px 0px rgba(0, 0, 0, 0.9),
+                1px -1px 0px rgba(0, 0, 0, 0.9),
+                -1px 1px 0px rgba(0, 0, 0, 0.9);
+        }
+        .buton_Save:hover {
+            background-color: #007965; 
+        }
+        .boton_Signin{
+            background-color: #009879;
+            color: green;
+            font-size: 24px;
+            padding: 10px 20px; 
+            border: none; 
+            cursor: pointer; 
+            border-radius: 5px; 
+            margin-bottom: 20px;
+            text-align: center;
+            text-shadow: 
+                1px 1px 0px rgba(0, 0, 0, 0.9),
+                -1px -1px 0px rgba(0, 0, 0, 0.9),
+                1px -1px 0px rgba(0, 0, 0, 0.9),
+                -1px 1px 0px rgba(0, 0, 0, 0.9);
+        }
+        .boton_Signin:hover {
+            background-color: #007965; 
+        }
+        .buton_Signup {
+            background-color: #009879;
+            color: green;
+            font-size: 24px;
+            padding: 10px 20px; 
+            border: none; 
+            cursor: pointer; 
+            border-radius: 5px; 
+            margin-bottom: 20px;
+            text-align: center;
+            text-shadow: 
+                1px 1px 0px rgba(0, 0, 0, 0.9),
+                -1px -1px 0px rgba(0, 0, 0, 0.9),
+                1px -1px 0px rgba(0, 0, 0, 0.9),
+                -1px 1px 0px rgba(0, 0, 0, 0.9);
+        }
+        .buton_Signup:hover {
+            background-color: #007965; 
+        }
+       
+        .form-group {
+            margin-bottom: 100px;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .form-group input, .form-group select, .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+            border: 1px solid #ccc; 
+            border-radius: 4px;
+            transition: border-color 0.2s ease-in-out;
+        }
+
+        .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+            outline: none;
+            color: red;
+            border-color: red; 
+            box-shadow: 0 0 5px rgba(22, 160, 133, 0.5); 
+        }
+
+        nav ul {
+            list-style-type: none; 
+            padding: 0;
+            margin: 0;
+            display: flex; 
+            justify-content: center; 
+        }
+
+        nav ul li {
+            margin: 0 15px; 
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #ecf0f1; 
+            font-size: 1.2em;
+        }
+
+        nav ul li a:hover {
+            color: #16a085; 
+        }
+
+        .styled-table {
+    width: 80%;
+    margin: 25px auto;
+    border-collapse: collapse;
+    font-size: 18px;
+    font-family: 'Arial', sans-serif;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    border: 2px solid white; 
+    background-color: rgba(255, 255, 255, 0.8); 
+}
+
+.styled-table thead tr {
+    text-align: center;
+    color: white; 
+    text-shadow: 
+        1px 1px 0px rgba(0, 0, 0, 0.9), 
+        -1px -1px 0px rgba(0, 0, 0, 0.9),
+        1px -1px 0px rgba(0, 0, 0, 0.9),
+        -1px 1px 0px rgba(0, 0, 0, 0.9);
+    font-family: Georgia, 'Times New Roman', Times, serif; 
+    font-size: 1em; 
+    background-color: #009879; 
+}
+
+.styled-table th, .styled-table td {
+    padding: 12px 15px;
+    text-align: center;
+    border: 1px solid white; 
+}
+
+.styled-table tbody tr {
+    border-bottom: 1px solid #ddd; 
+}
+
+.styled-table tbody tr:hover {
+    background-color: #e0e0e0; 
+    transform: scale(1.02); 
+}
+
+.cursos{
+    color: black;
+    text-shadow: 
+        1px 1px 0px rgba(255, 255, 255, 0.9), 
+        -1px -1px 0px rgba(255, 255, 255, 0.9),
+        1px -1px 0px rgba(255, 255, 255, 0.9),
+        -1px 1px 0px rgba(255, 255, 255, 0.9);
+    font-family: Georgia, 'Times New Roman', Times, serif; 
+    font-size: 2em; 
+}
+
+        .logo {
+            width: 500px;
+            height: 400px; 
+            margin-bottom: 0px; 
+        }
+        .home {
+    color: black;
+    text-shadow: 
+        1px 1px 0px rgba(255, 255, 255, 0.9), 
+        -1px -1px 0px rgba(255, 255, 255, 0.9),
+        1px -1px 0px rgba(255, 255, 255, 0.9),
+        -1px 1px 0px rgba(255, 255, 255, 0.9);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 2em; 
+}
+        .tasks{
+            color: black;
+    text-shadow: 
+        1px 1px 0px rgba(255, 255, 255, 0.9), 
+        -1px -1px 0px rgba(255, 255, 255, 0.9),
+        1px -1px 0px rgba(255, 255, 255, 0.9),
+        -1px 1px 0px rgba(255, 255, 255, 0.9);
+    font-family: Georgia, 'Times New Roman', Times, serif; 
+    font-size: 2em; 
+        }
+        .create{
+            color: black;
+    text-shadow: 
+        1px 1px 0px rgba(255, 255, 255, 0.9),
+        -1px -1px 0px rgba(255, 255, 255, 0.9),
+        1px -1px 0px rgba(255, 255, 255, 0.9),
+        -1px 1px 0px rgba(255, 255, 255, 0.9);
+    font-family: Georgia, 'Times New Roman', Times, serif; 
+    font-size: 2em; 
+        }
+        .acciones{
+            color: black;
+    text-shadow: 
+        1px 1px 0px rgba(255, 255, 255, 0.9), 
+        -1px -1px 0px rgba(255, 255, 255, 0.9),
+        1px -1px 0px rgba(255, 255, 255, 0.9),
+        -1px 1px 0px rgba(255, 255, 255, 0.9);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 2em; 
+        }
+        .c_logout{
+            color: black;
+    text-shadow: 
+        1px 1px 0px rgba(255, 255, 255, 0.9), 
+        -1px -1px 0px rgba(255, 255, 255, 0.9),
+        1px -1px 0px rgba(255, 255, 255, 0.9),
+        -1px 1px 0px rgba(255, 255, 255, 0.9);
+    font-family: Georgia, 'Times New Roman', Times, serif; 
+    font-size: 2em; 
+        }
+        .c_signup{
+            color: black;
+    text-shadow: 
+        1px 1px 0px rgba(255, 255, 255, 0.9), 
+        -1px -1px 0px rgba(255, 255, 255, 0.9),
+        1px -1px 0px rgba(255, 255, 255, 0.9),
+        -1px 1px 0px rgba(255, 255, 255, 0.9);
+    font-family: Georgia, 'Times New Roman', Times, serif; 
+    font-size: 2em;
+        }
+        .c_signin{
+            color: black;
+    text-shadow: 
+        1px 1px 0px rgba(255, 255, 255, 0.9), 
+        -1px -1px 0px rgba(255, 255, 255, 0.9),
+        1px -1px 0px rgba(255, 255, 255, 0.9),
+        -1px 1px 0px rgba(255, 255, 255, 0.9);
+    font-family: Georgia, 'Times New Roman', Times, serif; 
+    font-size: 2em; 
+        }
+        span.helptext#id_username_helptext {
+  display: none;
+}
+span.helptext#id_password2_helptext {
+  display: none;
+}
+ul {
+  display: none;
+}
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li>
+                <a class="home" href="/">Home</a>
+            </li>
+            <li>
+                <a class="tasks"   href="/tasks">Tasks</a>
+            </li>
+            {% if user.is_authenticated %}
+            
+            <li>
+                <a class="create" href="/tasks/create">Create Task</a>
+            </li>
+            <li>
+                <a class="acciones" href="/acciones/">Acciones</a>
+            </li>
+            <li>
+                <a class="c_logout" href="/logout">Logout</a>
+            </li>
+            {% else %}
+            <li>
+                <a class="c_signup" href="/signup">Signup</a>
+            </li>
+            <li>
+                <a class="c_signin" href="/signin">Signin</a>
+            </li>
+            {% endif %}
+        </ul>
+    </nav>
+    <div class="container">
+        {% block content %}
+        <div class="center-content">
+            <h2>Cursos</h2>
+
+            <table class="styled-table">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Código</th>
+                        <th>Créditos</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for task in tasks %}
+                    <tr>
+                        <td>{{task.Nombre}}</td>
+                        <td>{{task.Codigo}}</td>
+                        <td>{{task.Creditos}}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        {% endblock %}
+    </div>
+</body>
+</html>

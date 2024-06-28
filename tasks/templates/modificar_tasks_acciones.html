@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="center-content">
+   
+    <form method="POST" action="{% url 'acciones' %}" class="crear_form">
+        <h2 class="cursos">Modificar Curso</h2>
+        {% csrf_token %}
+
+        <input type="hidden" name="identificador" value="{{ task.Codigo}}">
+
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre_update" value="{{task.Nombre}}" required> <br><br>
+
+        <button type="submit" class="boton_Signin">Guardar Cambios</button>
+    </form>
+</div>
+{% endblock %}
